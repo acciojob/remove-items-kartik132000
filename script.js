@@ -1,12 +1,11 @@
-//your JS code here. If required.
-			document.addEventListener("DOMContentLoaded", function () {
-    const colorSelect = document.getElementById("colorSelect");
-    const removeButton = document.querySelector("input[type='button']");
+const colorSelect = document.getElementById('colorSelect');
+const removeColorButton = document.getElementById('removeColorButton');
 
-    removeButton.addEventListener("click", function () {
-        const selectedOption = colorSelect.options[colorSelect.selectedIndex];
-        if (selectedOption) {
-            colorSelect.remove(colorSelect.selectedIndex);
-        }
-    });
+// Add a click event listener to the remove button
+removeColorButton.addEventListener('click', () => {
+  // Get the selected option from the select element
+  const selectedOption = colorSelect.options[colorSelect.selectedIndex];
+  
+  // Remove the selected option from the select element
+  colorSelect.removeChild(selectedOption);
 });
